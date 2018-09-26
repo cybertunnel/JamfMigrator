@@ -12,6 +12,8 @@ import WebKit
 @available(OSX 10.11, *)
 class HelpViewController: NSViewController {
 
+    //  MARK: IBOutlets
+    
     @IBOutlet weak var help_WebView: WKWebView!
     
     
@@ -20,6 +22,7 @@ class HelpViewController: NSViewController {
 //        application.stopModal()
 //    }
     
+    //  MARK: Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

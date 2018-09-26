@@ -8,8 +8,12 @@
 
 import Foundation
 
+/**
+ Checks what version is currently installed, and what version is currently available for download.
+ */
 class VersionCheck: NSObject, URLSessionDelegate {
     
+    //  MARK: Functions
     func versionCheck(completion: @escaping (_ result: Bool) -> Void) {
         
         URLCache.shared.removeAllCachedResponses()

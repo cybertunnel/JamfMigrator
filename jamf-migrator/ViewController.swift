@@ -10,47 +10,13 @@ import Cocoa
 
 class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate, NSTableViewDataSource {
     
+    //  MARK: IBOutlets
+    
     // Main Window
     @IBOutlet var migrator_window: NSView!
     @IBOutlet weak var modeTab_TabView: NSTabView!
-    
     @IBOutlet weak var objectsToSelect: NSScrollView!
-    
-        // Help Window
-    @IBAction func showHelpWindow(_ sender: AnyObject) {
-        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-        let helpWindowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Help View Controller")) as! NSWindowController
-        helpWindowController.showWindow(self)
-        
-//        if let helpWindow = helpWindowController.window {
-//            //            let helpViewController = helpWindow.contentViewController as! HelpViewController
-//            
-//            let application = NSApplication.shared()
-//            application.runModal(for: helpWindow)
-//            
-//            helpWindow.close()
-//        }
-    }
-    
-    // Show Preferences Window
-    @IBAction func showPrefsWindow(_ sender: AnyObject) {
-        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-        let prefsWindowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Prefs View Controller")) as! NSWindowController
-        prefsWindowController.showWindow(self)
-    }
-
-        
-    // keychain access
-    let Creds = Credentials()
-    var validCreds       = true     // used to deterine if keychain has valid credentials
-    var storedSourceUser = ""       // source user account stored in the keychain
-    var storedDestUser   = ""       // destination user account stored in the keychain
     @IBOutlet weak var storeCredentials_button: NSButton!
-    var storeCredentials = 0
-    @IBAction func storeCredentials(_ sender: Any) {
-        storeCredentials = storeCredentials_button.state.rawValue
-    }
-        
     // Buttons
     // macOS tab
     @IBOutlet weak var allNone_button: NSButton!
@@ -63,7 +29,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     @IBOutlet weak var sus_button: NSButton!
     @IBOutlet weak var netboot_button: NSButton!
     @IBOutlet weak var osxconfigurationprofiles_button: NSButton!
-//    @IBOutlet weak var patch_mgmt_button: NSButton!
+    //    @IBOutlet weak var patch_mgmt_button: NSButton!
     @IBOutlet weak var patch_policies_button: NSButton!
     @IBOutlet weak var ext_attribs_button: NSButton!
     @IBOutlet weak var scripts_button: NSButton!
@@ -117,12 +83,6 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     @IBOutlet weak var iOSsectionToMigrate_button: NSPopUpButton!
     @IBOutlet weak var generalSectionToMigrate_button: NSPopUpButton!
     
-    var migrationMode = ""  // either buld or selective
-    
-    var platform = ""  // either macOS, iOS, or general
-    
-    var goSender = ""
-    
     // button labels
     // macOS button labels
     @IBOutlet weak var advcompsearch_label_field: NSTextField!
@@ -134,7 +94,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     @IBOutlet weak var sus_label_field: NSTextField!
     @IBOutlet weak var netboot_label_field: NSTextField!
     @IBOutlet weak var osxconfigurationprofiles_label_field: NSTextField!
-//    @IBOutlet weak var patch_mgmt_field: NSTextField!
+    //    @IBOutlet weak var patch_mgmt_field: NSTextField!
     @IBOutlet weak var patch_policies_field: NSTextField!
     @IBOutlet weak var extension_attributes_label_field: NSTextField!
     @IBOutlet weak var scripts_label_field: NSTextField!
@@ -188,21 +148,36 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     @IBOutlet weak var get_completed_field: NSTextField!
     @IBOutlet weak var get_found_field: NSTextField!
     
+    // destination TextFieldCells
+    @IBOutlet weak var destTextCell_TextFieldCell: NSTextFieldCell!
+    @IBOutlet weak var dest_TableColumn: NSTableColumn!
+    
     // selective migration items - start
     // source / destination tables
     @IBOutlet weak var srcSrvTableView: NSTableView!
     
+    @IBOutlet weak var mySpinner_ImageView: NSImageView!
+
+    
+    //  MARK: Variables
+    // keychain access
+    let Creds = Credentials()
+    var validCreds       = true     // used to deterine if keychain has valid credentials
+    var storedSourceUser = ""       // source user account stored in the keychain
+    var storedDestUser   = ""       // destination user account stored in the keychain
+    var storeCredentials = 0
+    var migrationMode = ""  // either buld or selective
+    
+    var platform = ""  // either macOS, iOS, or general
+    
+    var goSender = ""
     // source / destination array / dictionary of items
     var sourceDataArray:[String]            = []
     var targetDataArray:[String]            = []
     var availableIDsToMigDict:[String:Int]  = [:]   // something like xmlName, xmlID
     var availableObjsToMigDict:[Int:String] = [:]   // something like xmlID, xmlName
-//    var availableIdsToDelArray:[Int]        = []   // array of objects' to delete IDs
+    //    var availableIdsToDelArray:[Int]        = []   // array of objects' to delete IDs
     var selectiveListCleared                = false
-    
-    // destination TextFieldCells
-    @IBOutlet weak var destTextCell_TextFieldCell: NSTextFieldCell!
-    @IBOutlet weak var dest_TableColumn: NSTableColumn!
     // selective migration items - end
     
     var isDir: ObjCBool = false
@@ -218,7 +193,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     let plistPath:String? = (NSHomeDirectory() + "/Library/Application Support/jamf-migrator/settings.plist")
     var format = PropertyListSerialization.PropertyListFormat.xml //format of the property list
     var plistData:[String:Any] = [:]   //our server/username data
-
+    
     var maxHistory: Int = 20
     var historyFile: String = ""
     var logFile: String = ""
@@ -263,7 +238,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     var destBase64Creds: String     = ""
     
     var sourceURL = ""
-//    var destURL = ""
+    //    var destURL = ""
     var createDestUrlBase = ""
     
     var endpointDefDict = ["computergroups":"computer_groups","computerconfigurations":"computer_configurations", "directorybindings":"directory_bindings", "dockitems":"dock_items", "mobiledevicegroups":"mobile_device_groups", "packages":"packages", "patches":"patch_management_software_titles", "patchpolicies":"patch_policies", "printers":"printers", "scripts":"scripts", "usergroups":"user_groups", "userextensionattributes":"user_extension_attributes", "advancedusersearches":"advanced_user_searches", "restrictedsoftware":"restricted_software"]
@@ -295,9 +270,6 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     var counters = Dictionary<String, Dictionary<String,Int>>()     // summary counters of created, updated, and failed objects
     var tmp_counter = Dictionary<String, Dictionary<String,Int>>() // used to hold value of counter and avoid simultaneous access when updating
     var summaryDict = Dictionary<String, Dictionary<String,[String]>>()     // summary arrays of created, updated, and failed objects
-
-    
-    @IBOutlet weak var mySpinner_ImageView: NSImageView!
     var theImage:[NSImage] = [NSImage(named: NSImage.Name(rawValue: "0.png"))!, NSImage(named: NSImage.Name(rawValue: "1.png"))!, NSImage(named: NSImage.Name(rawValue: "2.png"))!]
     var showSpinner = false
     
@@ -312,7 +284,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     var objectsToMigrate: [String] = []
     
     // dictionaries to map id of object on source server to id of same object on destination server
-//    var computerconfigs_id_map = [String:Dictionary<String,Int>]()
+    //    var computerconfigs_id_map = [String:Dictionary<String,Int>]()
     var bindings_id_map = [String:Dictionary<String,Int>]()
     var packages_id_map = [String:Dictionary<String,Int>]()
     var printers_id_map = [String:Dictionary<String,Int>]()
@@ -339,6 +311,49 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     var URLisValid: Bool = true
     var processGroup = DispatchGroup()
     
+    
+    //  MARK: IBActions
+        // Help Window
+    @IBAction func showHelpWindow(_ sender: AnyObject) {
+        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
+        let helpWindowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Help View Controller")) as! NSWindowController
+        helpWindowController.showWindow(self)
+        
+//        if let helpWindow = helpWindowController.window {
+//            //            let helpViewController = helpWindow.contentViewController as! HelpViewController
+//            
+//            let application = NSApplication.shared()
+//            application.runModal(for: helpWindow)
+//            
+//            helpWindow.close()
+//        }
+    }
+    
+    // Show Preferences Window
+    @IBAction func showPrefsWindow(_ sender: AnyObject) {
+        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
+        let prefsWindowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Prefs View Controller")) as! NSWindowController
+        prefsWindowController.showWindow(self)
+    }
+
+    @IBAction func storeCredentials(_ sender: Any) {
+        storeCredentials = storeCredentials_button.state.rawValue
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
     @IBAction func showLogFolder(_ sender: Any) {
         isDir = true
         if (self.fm.fileExists(atPath: logPath!, isDirectory: &isDir)) {
@@ -680,6 +695,9 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
         self.goButtonEnabled(button_status: true)
         NSApplication.shared.terminate(self)
     }
+    
+    
+    //  MARK: Functions
     
     //================================= migration functions =================================//
     

@@ -9,10 +9,15 @@
 import Foundation
 
 class Xml {
+    
+    //  MARK: Variables
+    
     let vc = ViewController()
     let fm = FileManager()
     let baseXmlFolder = NSHomeDirectory() + "/Documents/Jamf Migrator"
 //    var saveXmlFolder = ""
+    
+    //  MARK: Functions
     
     func save(node: String, xml: String, name: String, id: Int, format: String) {
         // Create folder to store xml files if needed - start

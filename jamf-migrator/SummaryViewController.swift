@@ -11,6 +11,8 @@ import WebKit
 
 class SummaryViewController: NSViewController {
     
+    //  MARK: IBOutlets
+    
     @IBOutlet weak var summary_WebView: WKWebView!
     var summaryDict = Dictionary<String, Dictionary<String,Int>>()     // summary counters of created, updated, and failed objects
     
@@ -19,6 +21,9 @@ class SummaryViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
     }
+    
+    
+    //  MARK: IBActions
     
     @IBAction func dismissSummaryWindow(_ sender: NSButton) {
         let application = NSApplication.shared

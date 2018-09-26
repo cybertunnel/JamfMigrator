@@ -10,8 +10,8 @@ import Cocoa
 
 class PrefsViewController: NSViewController {
     
+    //  MARK: IBOutlets
     @IBOutlet var preferences_View: NSView!
-    
     @IBOutlet weak var copyScopeMCP_button: NSButton!       // mobile config profiles
     @IBOutlet weak var copyScopePolicy_button: NSButton!    // policies
     @IBOutlet weak var copyScopeOCP_button: NSButton!       // os x config profiles
@@ -23,7 +23,12 @@ class PrefsViewController: NSViewController {
     @IBOutlet weak var saveRawXml_button: NSButton!
     @IBOutlet weak var saveTrimmedXml_button: NSButton!
     @IBOutlet weak var saveOnly_button: NSButton!
+    @IBOutlet weak var copy_TextField: NSTextField!
+    @IBOutlet weak var export_TextField: NSTextField!
+    @IBOutlet weak var preferenceTabs_TabView: NSTabView!
     
+    
+    //  MARK: Variables
     let vc = ViewController()
     var plistData:[String:Any] = [:]  //our server/username data
     
@@ -45,12 +50,8 @@ class PrefsViewController: NSViewController {
     
     var buttonState = true
     
-    @IBOutlet weak var copy_TextField: NSTextField!
-    @IBOutlet weak var export_TextField: NSTextField!
     
-    
-    @IBOutlet weak var preferenceTabs_TabView: NSTabView!
-    
+    //  MARK: IBActions
     
     @IBAction func showCopyOptions_fn(_ sender: NSButton) {
         setFocus(whichTab: 0)
@@ -72,6 +73,9 @@ class PrefsViewController: NSViewController {
                             "saveOnly":convertToBool(state: saveOnly_button.state.rawValue)]
         vc.savePrefs(prefs: plistData)
     }
+    
+    
+    //  MARK: Functions
     
     func boolToState(TF: Bool) -> NSControl.StateValue {
         let state = (TF) ? 1:0

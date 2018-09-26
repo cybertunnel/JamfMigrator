@@ -10,6 +10,9 @@
 import Security
 import Foundation
 
+/**
+ NOTE: Unknown purpose
+ */
 class Credentials {
     
     func save(_ service: String, account: String, data: String) {
