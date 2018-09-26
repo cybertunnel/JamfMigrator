@@ -6,9 +6,7 @@
 //  Copyright © 2016 jamf. All rights reserved.
 //
 
-import AppKit
 import Cocoa
-import Foundation
 
 class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate, NSTableViewDataSource {
     

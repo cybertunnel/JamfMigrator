@@ -6,9 +6,7 @@
 //  Copyright © 2018 jamf. All rights reserved.
 //
 
-import AppKit
 import Cocoa
-import CoreFoundation
 
 class PrefsViewController: NSViewController {
     
