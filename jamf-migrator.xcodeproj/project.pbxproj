@@ -67,6 +67,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		814021E6215C0A420076EBAC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B5B6518F1F203C48007D7CE6 /* HelpViewController.swift */,
+				B58D87FD20C22293003F8D4C /* PrefsViewController.swift */,
+				B5B4FAFB1FF0B21C0007BD34 /* SummaryViewController.swift */,
+				9BC01C611DFB0C07007E634E /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		814021E7215C0A4E0076EBAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		814021E8215C0A590076EBAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B59D0C39202B97BA006203CE /* Credentials.swift */,
+				B5927AFB20CC394F0059C25B /* VersionCheck.swift */,
+				B5165E1520E580A00086E31D /* Xml.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		814021E9215C0A7F0076EBAC /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9BC01C631DFB0C07007E634E /* Assets.xcassets */,
+				9BC01C651DFB0C07007E634E /* Main.storyboard */,
+				9BC01C6E1DFBC564007E634E /* settings.plist */,
+				9BC01C681DFB0C07007E634E /* Info.plist */,
+			);
+			name = SupportFiles;
+			sourceTree = "<group>";
+		};
 		9BC01C531DFB0C07007E634E = {
 			isa = PBXGroup;
 			children = (
@@ -87,18 +126,11 @@
 			isa = PBXGroup;
 			children = (
 				9BC01C5F1DFB0C07007E634E /* AppDelegate.swift */,
-				B59D0C39202B97BA006203CE /* Credentials.swift */,
-				B5B6518F1F203C48007D7CE6 /* HelpViewController.swift */,
-				B58D87FD20C22293003F8D4C /* PrefsViewController.swift */,
-				B5B4FAFB1FF0B21C0007BD34 /* SummaryViewController.swift */,
-				B5927AFB20CC394F0059C25B /* VersionCheck.swift */,
-				9BC01C611DFB0C07007E634E /* ViewController.swift */,
-				B5165E1520E580A00086E31D /* Xml.swift */,
-				9BC01C631DFB0C07007E634E /* Assets.xcassets */,
+				814021E9215C0A7F0076EBAC /* SupportFiles */,
+				814021E8215C0A590076EBAC /* Models */,
+				814021E7215C0A4E0076EBAC /* Views */,
+				814021E6215C0A420076EBAC /* Controllers */,
 				B55A277F1EAF8CAE00AF8398 /* Images */,
-				9BC01C651DFB0C07007E634E /* Main.storyboard */,
-				9BC01C681DFB0C07007E634E /* Info.plist */,
-				9BC01C6E1DFBC564007E634E /* settings.plist */,
 				B5E179EF1F1FDACF00A20AAA /* help */,
 			);
 			path = "jamf-migrator";
@@ -160,7 +192,7 @@
 				TargetAttributes = {
 					9BC01C5B1DFB0C07007E634E = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = PS2F6S478M;
+						DevelopmentTeam = DAH86Q54R2;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
@@ -351,7 +383,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = PS2F6S478M;
+				DEVELOPMENT_TEAM = DAH86Q54R2;
 				INFOPLIST_FILE = "jamf-migrator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -368,7 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = PS2F6S478M;
+				DEVELOPMENT_TEAM = DAH86Q54R2;
 				INFOPLIST_FILE = "jamf-migrator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
