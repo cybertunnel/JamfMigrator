@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		814021EB215C14060076EBAC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814021EA215C14060076EBAC /* Configuration.swift */; };
+		81402226215C17090076EBAC /* macOSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81402225215C17090076EBAC /* macOSConfiguration.swift */; };
 		9BC01C601DFB0C07007E634E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC01C5F1DFB0C07007E634E /* AppDelegate.swift */; };
 		9BC01C621DFB0C07007E634E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC01C611DFB0C07007E634E /* ViewController.swift */; };
 		9BC01C641DFB0C07007E634E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BC01C631DFB0C07007E634E /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		814021EA215C14060076EBAC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		81402225215C17090076EBAC /* macOSConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSConfiguration.swift; sourceTree = "<group>"; };
 		9BC01C5C1DFB0C07007E634E /* jamf-migrator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jamf-migrator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC01C5F1DFB0C07007E634E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BC01C611DFB0C07007E634E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				B59D0C39202B97BA006203CE /* Credentials.swift */,
 				B5927AFB20CC394F0059C25B /* VersionCheck.swift */,
 				B5165E1520E580A00086E31D /* Xml.swift */,
+				814021EA215C14060076EBAC /* Configuration.swift */,
+				81402224215C16E50076EBAC /* Configurations */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -104,6 +110,14 @@
 				9BC01C681DFB0C07007E634E /* Info.plist */,
 			);
 			name = SupportFiles;
+			sourceTree = "<group>";
+		};
+		81402224215C16E50076EBAC /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				81402225215C17090076EBAC /* macOSConfiguration.swift */,
+			);
+			name = Configurations;
 			sourceTree = "<group>";
 		};
 		9BC01C531DFB0C07007E634E = {
@@ -247,10 +261,12 @@
 				B5165E1620E580A00086E31D /* Xml.swift in Sources */,
 				9BC01C621DFB0C07007E634E /* ViewController.swift in Sources */,
 				B58D87FE20C22293003F8D4C /* PrefsViewController.swift in Sources */,
+				814021EB215C14060076EBAC /* Configuration.swift in Sources */,
 				B5B651901F203C48007D7CE6 /* HelpViewController.swift in Sources */,
 				B5927AFC20CC394F0059C25B /* VersionCheck.swift in Sources */,
 				B59D0C3A202B97BA006203CE /* Credentials.swift in Sources */,
 				9BC01C601DFB0C07007E634E /* AppDelegate.swift in Sources */,
+				81402226215C17090076EBAC /* macOSConfiguration.swift in Sources */,
 				B5B4FAFC1FF0B21C0007BD34 /* SummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
