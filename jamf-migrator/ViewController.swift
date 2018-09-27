@@ -162,6 +162,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     //  MARK: Variables
     @objc let macOSConfig = macOSConfiguration()
     @objc let iOSConfig = iOSConfiguration()
+    @objc let config = GeneralConfiguration()
     // keychain access
     let Creds = Credentials()
     var validCreds       = true     // used to deterine if keychain has valid credentials
@@ -402,6 +403,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
  */
         } else {
             // general
+/** NOTE: Commenting out for binding testing
             self.allNone_general_button.state = NSControl.StateValue(rawValue: (
                 self.building_button.state.rawValue == 1
                     && self.categories_button.state.rawValue == 1
@@ -416,6 +418,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
                     && self.smartUserGrps_button.state.rawValue == 1
                     && self.staticUserGrps_button.state.rawValue == 1
                     && self.users_button.state.rawValue == 1) ? 1 : 0);
+ */
         }
     }
     
@@ -452,6 +455,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
             self.mobiledeviceconfigurationprofiles_button.state = self.allNone_iOS_button.state
  */
         } else {
+/** NOTE: Commenting out for binding testing
             self.building_button.state = self.allNone_general_button.state
             self.categories_button.state = self.allNone_general_button.state
             self.dept_button.state = self.allNone_general_button.state
@@ -465,6 +469,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
             self.smartUserGrps_button.state = self.allNone_general_button.state
             self.staticUserGrps_button.state = self.allNone_general_button.state
             self.users_button.state = self.allNone_general_button.state
+ */
         }
     }
     
@@ -3919,6 +3924,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
         mobiledeviceextensionattributes_button.state = NSControl.StateValue(rawValue: 1)
  */
         // general tab
+/** NOTE: Commenting out for binding testing
         allNone_general_button.state = NSControl.StateValue(rawValue: 1)
         advusersearch_button.state = NSControl.StateValue(rawValue: 1)
         building_button.state = NSControl.StateValue(rawValue: 1)
@@ -3933,6 +3939,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
         jamfGroupAccounts_button.state = NSControl.StateValue(rawValue: 1)
         smartUserGrps_button.state = NSControl.StateValue(rawValue: 1)
         staticUserGrps_button.state = NSControl.StateValue(rawValue: 1)
+ */
         
         source_jp_server_field.becomeFirstResponder()
         go_button.isEnabled = true

@@ -1814,7 +1814,7 @@
                                         <accessibility description="macOS" identifier="macOS"/>
                                     </tabViewItem>
                                     <tabViewItem label="iOS" identifier="2" id="ECI-6E-ufR">
-                                        <view key="view" ambiguous="YES" id="p6U-ah-Cbx">
+                                        <view key="view" id="p6U-ah-Cbx">
                                             <rect key="frame" x="10" y="33" width="696" height="186"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -2029,7 +2029,7 @@
                                         <accessibility description="iOS" identifier="iOS"/>
                                     </tabViewItem>
                                     <tabViewItem label="General" identifier="" id="88A-Nu-WEM">
-                                        <view key="view" id="CPy-PU-zBW">
+                                        <view key="view" ambiguous="YES" id="CPy-PU-zBW">
                                             <rect key="frame" x="10" y="33" width="696" height="186"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <userGuides>
@@ -2064,6 +2064,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="allNone:" target="XfG-lQ-9wD" id="gw3-6N-Xdy"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.selectAll" id="og9-ZV-Yt3"/>
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRd-jK-zIk" userLabel="Categories fld">
@@ -2084,6 +2085,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Yfo-KR-732"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.categories" id="tze-dS-upe"/>
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9z-MB-k3t" userLabel="Buildings fld">
@@ -2104,6 +2106,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="cWY-si-yVy"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.buildings" id="zOB-YW-4JR"/>
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="upy-EX-NVp" userLabel="Users fld">
@@ -2124,6 +2127,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="1el-CX-7J1"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.users" id="3gv-z9-fRq"/>
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhD-Q3-KDx" userLabel="Sites fld">
@@ -2144,6 +2148,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="atd-5g-QPN"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.sites" id="COf-gL-ToB"/>
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2kz-HF-tp3" userLabel="Network Segments fld">
@@ -2164,6 +2169,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Gc3-co-4uL"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.networkSegments" id="DTa-wy-N28"/>
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ujv-CO-BGg" userLabel="Departments fld">
@@ -2184,6 +2190,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="P5G-c0-uq7"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.departments" id="cyT-hR-VTZ"/>
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BXm-Uk-9pd" userLabel="LDAP fld">
@@ -2204,6 +2211,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="uRg-Bj-vZx"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.LDAPServers" id="8dC-NT-pCP"/>
                                                     </connections>
                                                 </button>
                                                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="peA-aJ-t5r" userLabel="smart grp button">
@@ -2215,6 +2223,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Y0J-zf-4LP"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.smartUserGroups" id="eRE-wm-kWv"/>
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UU9-3N-hsp" userLabel="Users EA fld">
@@ -2235,6 +2244,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Kro-uv-V8r"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.userEAs" id="lC3-Dn-KXP"/>
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qck-dJ-qag" userLabel="Users fld">
@@ -2255,6 +2265,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="f3B-7V-Jjn"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.advUserSearches" id="p9x-NY-Mjf"/>
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="85a-8h-YWe">
@@ -2275,6 +2286,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="5Uf-ej-2g6"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.jamfUsers" id="07D-p9-rMy"/>
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="77F-Xy-56l" userLabel="jamf Groups">
@@ -2295,6 +2307,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="BSi-oB-ls4"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.jamfGroups" id="4xh-7W-cmK"/>
                                                     </connections>
                                                 </button>
                                                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Sh-gj-yTi">
@@ -2315,6 +2328,7 @@
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="h2j-3G-hdN"/>
+                                                        <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.staticUserGroups" id="bWP-Rb-erA"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

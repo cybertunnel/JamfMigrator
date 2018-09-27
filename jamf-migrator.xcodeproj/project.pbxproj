@@ -10,6 +10,7 @@
 		814021EB215C14060076EBAC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814021EA215C14060076EBAC /* Configuration.swift */; };
 		81402226215C17090076EBAC /* macOSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81402225215C17090076EBAC /* macOSConfiguration.swift */; };
 		816E998E215D721B00E69A3F /* iOSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E998D215D721B00E69A3F /* iOSConfiguration.swift */; };
+		816E9990215D760500E69A3F /* GeneralConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E998F215D760500E69A3F /* GeneralConfiguration.swift */; };
 		9BC01C601DFB0C07007E634E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC01C5F1DFB0C07007E634E /* AppDelegate.swift */; };
 		9BC01C621DFB0C07007E634E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC01C611DFB0C07007E634E /* ViewController.swift */; };
 		9BC01C641DFB0C07007E634E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BC01C631DFB0C07007E634E /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		814021EA215C14060076EBAC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		81402225215C17090076EBAC /* macOSConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSConfiguration.swift; sourceTree = "<group>"; };
 		816E998D215D721B00E69A3F /* iOSConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSConfiguration.swift; sourceTree = "<group>"; };
+		816E998F215D760500E69A3F /* GeneralConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralConfiguration.swift; sourceTree = "<group>"; };
 		9BC01C5C1DFB0C07007E634E /* jamf-migrator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jamf-migrator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC01C5F1DFB0C07007E634E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BC01C611DFB0C07007E634E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				81402225215C17090076EBAC /* macOSConfiguration.swift */,
 				816E998D215D721B00E69A3F /* iOSConfiguration.swift */,
+				816E998F215D760500E69A3F /* GeneralConfiguration.swift */,
 			);
 			name = Configurations;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				9BC01C601DFB0C07007E634E /* AppDelegate.swift in Sources */,
 				81402226215C17090076EBAC /* macOSConfiguration.swift in Sources */,
 				B5B4FAFC1FF0B21C0007BD34 /* SummaryViewController.swift in Sources */,
+				816E9990215D760500E69A3F /* GeneralConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
