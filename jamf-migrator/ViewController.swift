@@ -161,6 +161,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     
     //  MARK: Variables
     @objc let macOSConfig = macOSConfiguration()
+    @objc let iOSConfig = iOSConfiguration()
     // keychain access
     let Creds = Credentials()
     var validCreds       = true     // used to deterine if keychain has valid credentials
@@ -390,6 +391,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
                     && self.policies_button.state.rawValue == 1) ? 1 : 0);
  */
         } else if deviceType() == "iOS" {
+/** NOTE: Commenting out for binding testing
             self.allNone_iOS_button.state = NSControl.StateValue(rawValue: (
                 self.mobiledeviceconfigurationprofiles_button.state.rawValue == 1
                     && self.mobiledevices_button.state.rawValue == 1
@@ -397,6 +399,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
                     && self.static_ios_groups_button.state.rawValue == 1
                     && self.mobiledeviceextensionattributes_button.state.rawValue == 1
                     && self.advancedmobiledevicesearches_button.state.rawValue == 1) ? 1 : 0);
+ */
         } else {
             // general
             self.allNone_general_button.state = NSControl.StateValue(rawValue: (
@@ -440,12 +443,14 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
             self.policies_button.state = self.allNone_button.state
  */
         } else if deviceType() == "iOS" {
+/** NOTE: Commenting out for binding testing
             self.advancedmobiledevicesearches_button.state = self.allNone_iOS_button.state
             self.mobiledevices_button.state = self.allNone_iOS_button.state
             self.smart_ios_groups_button.state = self.allNone_iOS_button.state
             self.static_ios_groups_button.state = self.allNone_iOS_button.state
             self.mobiledeviceextensionattributes_button.state = self.allNone_iOS_button.state
             self.mobiledeviceconfigurationprofiles_button.state = self.allNone_iOS_button.state
+ */
         } else {
             self.building_button.state = self.allNone_general_button.state
             self.categories_button.state = self.allNone_general_button.state
@@ -3880,6 +3885,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
         // Do any additional setup after loading the view.
         // Sellect all items to be migrated
         // macOS tab
+/** NOTE: Commanding out for binding testing
         allNone_button.state = NSControl.StateValue(rawValue: 1)
         advcompsearch_button.state = NSControl.StateValue(rawValue: 1)
         computers_button.state = NSControl.StateValue(rawValue: 1)
@@ -3900,7 +3906,9 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
         policies_button.state = NSControl.StateValue(rawValue: 1)
         printers_button.state = NSControl.StateValue(rawValue: 1)
         restrictedsoftware_button.state = NSControl.StateValue(rawValue: 1)
+ */
         // iOS tab
+/** NOTE: Commanding out for binding testing
         allNone_iOS_button.state = NSControl.StateValue(rawValue: 1)
         advancedmobiledevicesearches_button.state = NSControl.StateValue(rawValue: 1)
         mobiledevicecApps_button.state = NSControl.StateValue(rawValue: 0)
@@ -3909,6 +3917,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
         static_ios_groups_button.state = NSControl.StateValue(rawValue: 1)
         mobiledeviceconfigurationprofiles_button.state = NSControl.StateValue(rawValue: 1)
         mobiledeviceextensionattributes_button.state = NSControl.StateValue(rawValue: 1)
+ */
         // general tab
         allNone_general_button.state = NSControl.StateValue(rawValue: 1)
         advusersearch_button.state = NSControl.StateValue(rawValue: 1)

@@ -164,15 +164,4 @@ class macOSConfiguration: Configuration {
         self.flag = false
     }
     
-    /**
-     Function to handle the process of updated a key binding in a clean way.
-     - Parameters:
-        - name: Name of the key you are changing.
-        - callback: The function you are doing to update the key binding.
-     */
-    private func updateKeyBinding(_ name: String, callback: () -> Void) {
-        self.willChangeValue(forKey: name)
-        callback()
-        self.didChangeValue(forKey: name)
-    }
 }

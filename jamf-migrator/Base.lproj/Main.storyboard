@@ -1389,7 +1389,7 @@
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="macOS" identifier="1" id="Nof-Zl-FoE">
-                                        <view key="view" ambiguous="YES" id="fn5-oe-BJC">
+                                        <view key="view" id="fn5-oe-BJC">
                                             <rect key="frame" x="10" y="33" width="696" height="186"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -1814,7 +1814,7 @@
                                         <accessibility description="macOS" identifier="macOS"/>
                                     </tabViewItem>
                                     <tabViewItem label="iOS" identifier="2" id="ECI-6E-ufR">
-                                        <view key="view" id="p6U-ah-Cbx">
+                                        <view key="view" ambiguous="YES" id="p6U-ah-Cbx">
                                             <rect key="frame" x="10" y="33" width="696" height="186"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -1850,6 +1850,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="allNone:" target="XfG-lQ-9wD" id="ohi-uf-wca"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.selectAll" id="kTv-lu-QCh"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uo3-PW-fQz" userLabel="Static Group fld">
@@ -1870,6 +1871,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="wsn-iq-7LO"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.staticGroups" id="vRz-aZ-hDr"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P8w-fr-x4i">
@@ -1890,6 +1892,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="L9W-B1-Ojc"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.smartGroups" id="17s-Xl-9n5"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N1p-Jj-8kH" userLabel="Adv iOS Searches">
@@ -1910,6 +1913,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Uu6-rJ-6yc"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.adviOSSearches" id="c38-gI-1F7"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NO1-GB-wJY">
@@ -1930,6 +1934,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Nhj-vd-hMp"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.iOSDevices" id="XEF-TB-EEQ"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMW-Ft-Ese" userLabel="Classes">
@@ -1990,6 +1995,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Xne-cs-CCT"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.extensionAttributes" id="bhD-kp-WSc"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GOb-w1-9QU" userLabel="Config Profile field">
@@ -2010,6 +2016,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="bbu-Oa-wWn"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.configProfiles" id="A5s-vh-3RR"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
