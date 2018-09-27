@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14113"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14109"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
@@ -676,7 +676,7 @@
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="Copy Options" identifier="copyOptions" id="ZJF-Wy-F4D">
-                                        <view key="view" id="ylm-IL-sae">
+                                        <view key="view" ambiguous="YES" id="ylm-IL-sae">
                                             <rect key="frame" x="1" y="1" width="0.0" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -862,7 +862,7 @@
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Export Options" identifier="exportOptions" id="hIa-H1-kMK">
-                                        <view key="view" ambiguous="YES" id="fVK-68-4i0">
+                                        <view key="view" id="fVK-68-4i0">
                                             <rect key="frame" x="1" y="1" width="327" height="192"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -1425,6 +1425,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="allNone:" target="XfG-lQ-9wD" id="V1r-44-GIu"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.selectAll" id="A4Q-ST-beN"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VTB-4B-taj">
@@ -1445,6 +1446,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="7cR-ph-3Ad"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.smartGroups" id="Pdk-F1-9Yg"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O25-Wj-mUa" userLabel="Static Group fld">
@@ -1465,6 +1467,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="46Q-AK-mO8"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.staticGroups" id="Hpn-4W-6uh"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kMV-ND-9Kx" userLabel="Scripts">
@@ -1485,6 +1488,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="CRp-pZ-0hc"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.scripts" id="Nn1-Yd-NLx"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4g-bk-XZJ">
@@ -1505,6 +1509,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="3ZG-xa-5tk"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.extensionAttributes" id="t0R-VZ-kPi"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5v-KK-ZKw" userLabel="File Shares (AFP/SMB)">
@@ -1525,6 +1530,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Uys-mO-IZL"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.fileShares" id="0qt-6w-r7X"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TGh-dy-khY" userLabel="SUS">
@@ -1545,6 +1551,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="gBZ-aK-Ls9"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.sus" id="W97-zh-37g"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V21-1X-tzz">
@@ -1565,6 +1572,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="1oL-A0-KdZ"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.policies" id="2wQ-tI-bQW"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHx-8J-iwK">
@@ -1585,6 +1593,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="8hJ-C8-uND"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.computers" id="xpH-TA-hBP"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uAi-xC-0ej" userLabel="Config Profile field">
@@ -1605,6 +1614,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="RDy-sC-qBs"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.configProfiles" id="hSK-uY-xP8"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vHg-RG-3pb" userLabel="Adv Comp Searches">
@@ -1625,6 +1635,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="R4b-Z1-1U7"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.advCompSearches" id="D19-0J-yIT"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyq-nN-Llg" userLabel="Netboot Servers">
@@ -1645,6 +1656,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="o7c-Z5-SiQ"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.netbootServers" id="FKl-Dv-bN9"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tvH-Q3-0zQ" userLabel="Packages field">
@@ -1665,6 +1677,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="IpP-4y-Yco"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.packages" id="i1t-AI-9gi"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VB2-eO-067" userLabel="Printers field">
@@ -1685,6 +1698,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="7pj-OG-TqB"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.printers" id="HAP-oI-OdZ"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jh1-S4-tyb" userLabel="directory bindings">
@@ -1703,6 +1717,9 @@
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
+                                                                        <connections>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.directoryBindings" id="nz8-Ws-HWC"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y2r-qc-GSV" userLabel="dock items fld">
                                                                         <rect key="frame" x="39" y="94" width="102" height="17"/>
@@ -1722,6 +1739,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="9XO-hZ-EaL"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.dockItems" id="2CH-yG-oBG"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25Y-OQ-cdE" userLabel="Configurations fld">
@@ -1742,6 +1760,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="zpm-63-oln"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.configurations" id="g5I-oo-eyx"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2tr-YW-IQ0" userLabel="Restricted Software fld">
@@ -1762,6 +1781,7 @@
                                                                         </buttonCell>
                                                                         <connections>
                                                                             <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="L2r-3S-lEI"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.restrictedSoftware" id="tZY-oQ-tTg"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TwK-8j-8nD" userLabel="Patch Policies fld">
@@ -2479,7 +2499,7 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <clipView key="contentView" ambiguous="YES" id="xbF-pR-KVb">
                                                                 <rect key="frame" x="1" y="1" width="395" height="161"/>
-                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" autosaveColumns="NO" id="FBt-wQ-W9U" userLabel="Source Table View">
                                                                         <rect key="frame" x="0.0" y="0.0" width="395" height="161"/>
@@ -2735,6 +2755,7 @@
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="bhz-hb-yKK"/>
             </objects>
             <point key="canvasLocation" x="-152.5" y="720"/>
         </scene>

@@ -160,6 +160,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
 
     
     //  MARK: Variables
+    @objc let macOSConfig = macOSConfiguration()
     // keychain access
     let Creds = Credentials()
     var validCreds       = true     // used to deterine if keychain has valid credentials
@@ -366,6 +367,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     @IBAction func toggleAllNone(_ sender: NSButton) {
         //        platform = deviceType()
         if deviceType() == "macOS" {
+/** NOTE: Commenting out for binding testing
             self.allNone_button.state = NSControl.StateValue(rawValue: (
                 self.advcompsearch_button.state.rawValue == 1
                     && self.computers_button.state.rawValue == 1
@@ -386,6 +388,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
                     && self.printers_button.state.rawValue == 1
                     && self.restrictedsoftware_button.state.rawValue == 1
                     && self.policies_button.state.rawValue == 1) ? 1 : 0);
+ */
         } else if deviceType() == "iOS" {
             self.allNone_iOS_button.state = NSControl.StateValue(rawValue: (
                 self.mobiledeviceconfigurationprofiles_button.state.rawValue == 1
@@ -415,6 +418,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     
     @IBAction func allNone(_ sender: Any) {
         if deviceType() == "macOS" {
+/** NOTE: Commenting out for binding testing
             self.advcompsearch_button.state = self.allNone_button.state
             self.computers_button.state = self.allNone_button.state
             self.configurations_button.state = self.allNone_button.state
@@ -434,6 +438,7 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
             self.printers_button.state = self.allNone_button.state
             self.restrictedsoftware_button.state = self.allNone_button.state
             self.policies_button.state = self.allNone_button.state
+ */
         } else if deviceType() == "iOS" {
             self.advancedmobiledevicesearches_button.state = self.allNone_iOS_button.state
             self.mobiledevices_button.state = self.allNone_iOS_button.state

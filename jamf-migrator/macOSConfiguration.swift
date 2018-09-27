@@ -14,94 +14,96 @@ import Foundation
 class macOSConfiguration: Configuration {
     
     //  Variables for Cocoa Bindings
+    private var flag: Bool  = false //   This is set when a check is done.
     @objc var selectAll: Bool = true {
         willSet(newValue) {
+            if self.flag { return }
             self.setAll(newValue)
         }
     }
     @objc var fileShares: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var directoryBindings: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var dockItems: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var computers: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var sus: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var netbootServers: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var extensionAttributes: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var scripts: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var printers: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var smartGroups: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var staticGroups: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var restrictedSoftware: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var configProfiles: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var packages: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var advCompSearches: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var configurations: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     @objc var policies: Bool = true {
-        willSet(newValue) {
-            self.checkAll(newValue)
+        didSet {
+            self.checkAll()
         }
     }
     
@@ -133,26 +135,33 @@ class macOSConfiguration: Configuration {
         self.updateKeyBinding("policies") { self.policies = value }
     }
     
-    private func checkAll(_ value: Bool) -> Void {
-        if (self.fileShares == value &&
-            self.directoryBindings == value &&
-            self.dockItems == value &&
-            self.computers == value &&
-            self.sus == value &&
-            self.netbootServers == value &&
-            self.extensionAttributes == value &&
-            self.scripts == value &&
-            self.printers == value &&
-            self.smartGroups == value &&
-            self.staticGroups == value &&
-            self.restrictedSoftware == value &&
-            self.configProfiles == value &&
-            self.packages == value &&
-            self.advCompSearches == value &&
-            self.configurations == value &&
+    /**
+     Checks if all the values are true or not, and updates it accordingly.
+    */
+    private func checkAll() -> Void {
+        self.flag = true
+        if (self.fileShares &&
+            self.directoryBindings &&
+            self.dockItems &&
+            self.computers &&
+            self.sus &&
+            self.netbootServers &&
+            self.extensionAttributes &&
+            self.scripts &&
+            self.printers &&
+            self.smartGroups &&
+            self.staticGroups &&
+            self.restrictedSoftware &&
+            self.configProfiles &&
+            self.packages &&
+            self.advCompSearches &&
+            self.configurations &&
             self.policies) {
-            self.selectAll = value
+            self.updateKeyBinding("selectAll") {    self.selectAll = true  }
+        } else {
+            self.updateKeyBinding("selectAll") {    self.selectAll = false  }
         }
+        self.flag = false
     }
     
     /**
