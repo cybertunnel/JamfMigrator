@@ -711,144 +711,146 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
                         // macOS
                         switch self.deviceType() {
                         case "macOS":
-                            if self.fileshares_button.state.rawValue == 1 {
+                            if self.macOSConfig.fileShares {
                                 self.objectsToMigrate += ["distributionpoints"]
                             }
                             
-                            if self.directory_bindings_button.state.rawValue == 1 {
+                            if self.macOSConfig.directoryBindings {
                                 self.objectsToMigrate += ["directorybindings"]
                             }
                             
-                            if self.dock_items_button.state.rawValue == 1 {
+                            if self.macOSConfig.dockItems {
                                 self.objectsToMigrate += ["dockitems"]
                             }
                             
-                            if self.computers_button.state.rawValue == 1 {
+                            if self.macOSConfig.computers {
                                 self.objectsToMigrate += ["computers"]
                             }
                             
-                            if self.sus_button.state.rawValue == 1 {
+                            if self.macOSConfig.sus {
                                 self.objectsToMigrate += ["softwareupdateservers"]
                             }
                             
-                            if self.netboot_button.state.rawValue == 1 {
+                            if self.macOSConfig.netbootServers {
                                 self.objectsToMigrate += ["netbootservers"]
                             }
                             
-                            if self.ext_attribs_button.state.rawValue == 1 {
+                            if self.macOSConfig.extensionAttributes {
                                 self.objectsToMigrate += ["computerextensionattributes"]
                             }
                             
-                            if self.scripts_button.state.rawValue == 1 {
+                            if self.macOSConfig.scripts {
                                 self.objectsToMigrate += ["scripts"]
                             }
                             
-                            if self.printers_button.state.rawValue == 1 {
+                            if self.macOSConfig.printers {
                                 self.objectsToMigrate += ["printers"]
                             }
                             
-                            if self.smart_comp_grps_button.state.rawValue == 1 || self.static_comp_grps_button.state.rawValue == 1 {
+                            if self.macOSConfig.staticGroups || self.macOSConfig.smartGroups {
                                 self.objectsToMigrate += ["computergroups"]
                             }
                             
-                            if self.restrictedsoftware_button.state.rawValue == 1 {
+                            if self.macOSConfig.restrictedSoftware {
                                 self.objectsToMigrate += ["restrictedsoftware"]
                             }
                             
-                            if self.osxconfigurationprofiles_button.state.rawValue == 1 {
+                            if self.macOSConfig.configProfiles {
                                 self.objectsToMigrate += ["osxconfigurationprofiles"]
                             }
                             
-                            if self.packages_button.state.rawValue == 1 {
+                            if self.macOSConfig.packages {
                                 self.objectsToMigrate += ["packages"]
                             }
                             
+                            //  TODO: Add support for patch policies
                             if self.patch_policies_button.state.rawValue == 1 {
                                 //                    self.objectsToMigrate += ["patches"]
                                 self.objectsToMigrate += ["patchpolicies"]
                             }
                             
-                            if self.advcompsearch_button.state.rawValue == 1 {
+                            if self.macOSConfig.advCompSearches {
                                 self.objectsToMigrate += ["advancedcomputersearches"]
                             }
                             
-                            if self.configurations_button.state.rawValue == 1 {
+                            if self.macOSConfig.configurations {
                                 self.objectsToMigrate += ["computerconfigurations"]
                             }
                             
-                            if self.policies_button.state.rawValue == 1 {
+                            if self.macOSConfig.policies {
                                 self.objectsToMigrate += ["policies"]
                             }
                         case "iOS":
-                            if self.mobiledeviceextensionattributes_button.state.rawValue == 1 {
+                            if self.iOSConfig.extensionAttributes {
                                 self.objectsToMigrate += ["mobiledeviceextensionattributes"]
                             }
                             
-                            if self.mobiledevices_button.state.rawValue == 1 {
+                            if self.iOSConfig.iOSDevices {
                                 self.objectsToMigrate += ["mobiledevices"]
                             }
                             
-                            if self.smart_ios_groups_button.state.rawValue == 1 || self.static_ios_groups_button.state.rawValue == 1 {
+                            if self.iOSConfig.staticGroups || self.iOSConfig.smartGroups {
                                 self.objectsToMigrate += ["mobiledevicegroups"]
                             }
                             
-                            if self.advancedmobiledevicesearches_button.state.rawValue == 1 {
+                            if self.iOSConfig.adviOSSearches {
                                 self.objectsToMigrate += ["advancedmobiledevicesearches"]
                             }
                             
+                            //  TODO: Look into this and add support if needed.
                             if self.mobiledevicecApps_button.state.rawValue == 1 {
                                 //                    self.objectsToMigrate += ["mobiledeviceapplications"]
                             }
                             
-                            if self.mobiledeviceconfigurationprofiles_button.state.rawValue == 1 {
+                            if self.iOSConfig.configProfiles {
                                 self.objectsToMigrate += ["mobiledeviceconfigurationprofiles"]
                             }
                         case "general":
-                            if self.sites_button.state.rawValue == 1 {
+                            if self.config.sites {
                                 self.objectsToMigrate += ["sites"]
                             }
                             
-                            if self.userEA_button.state.rawValue == 1 {
+                            if self.config.userEAs {
                                 self.objectsToMigrate += ["userextensionattributes"]
                             }
                             
-                            if self.ldapservers_button.state.rawValue == 1 {
+                            if self.config.LDAPServers {
                                 self.objectsToMigrate += ["ldapservers"]
                             }
                             
-                            if self.users_button.state.rawValue == 1 {
+                            if self.config.users {
                                 self.objectsToMigrate += ["users"]
                             }
                             
-                            if self.building_button.state.rawValue == 1 {
+                            if self.config.buildings {
                                 self.objectsToMigrate += ["buildings"]
                             }
                             
-                            if self.dept_button.state.rawValue == 1 {
+                            if self.config.departments {
                                 self.objectsToMigrate += ["departments"]
                             }
                             
-                            if self.categories_button.state.rawValue == 1 {
+                            if self.config.categories {
                                 self.objectsToMigrate += ["categories"]
                             }
                             
-                            if self.jamfUserAccounts_button.state.rawValue == 1 {
+                            if self.config.jamfUsers {
                                 self.objectsToMigrate += ["jamfusers"]
                             }
                             
-                            if self.jamfGroupAccounts_button.state.rawValue == 1 {
+                            if self.config.jamfGroups {
                                 self.objectsToMigrate += ["jamfgroups"]
                             }
                             
-                            if self.networks_button.state.rawValue == 1 {
+                            if self.config.networkSegments {
                                 self.objectsToMigrate += ["networksegments"]
                             }
                             
-                            if self.advusersearch_button.state.rawValue == 1 {
+                            if self.config.advUserSearches {
                                 self.objectsToMigrate += ["advancedusersearches"]
                             }
                             
-                            if self.smartUserGrps_button.state.rawValue == 1 || self.staticUserGrps_button.state.rawValue == 1 {
+                            if self.config.staticUserGroups || self.config.smartUserGroups {
                                 self.objectsToMigrate += ["usergroups"]
                             }
                         default: break
