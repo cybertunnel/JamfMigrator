@@ -2601,7 +2601,7 @@
                                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="showPrefsWindow:" target="XfG-lQ-9wD" id="7mJ-ki-Ahy"/>
+                                    <segue destination="do0-NK-HtC" kind="show" id="x4D-RS-ex9"/>
                                 </connections>
                             </button>
                             <button toolTip="Help" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M64-Jm-oGn">
@@ -2612,7 +2612,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="showHelpWindow:" target="XfG-lQ-9wD" id="35O-8e-MX9"/>
+                                    <segue destination="M0I-3w-TrH" kind="show" id="7kp-T1-MzI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2746,4 +2746,8 @@
         <image name="quit" width="86" height="39"/>
         <image name="stop" width="74" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7kp-T1-MzI"/>
+        <segue reference="x4D-RS-ex9"/>
+    </inferredMetricsTieBreakers>
 </document>

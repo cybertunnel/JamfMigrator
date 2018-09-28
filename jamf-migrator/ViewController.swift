@@ -316,29 +316,6 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     
     
     //  MARK: IBActions
-        // Help Window
-    @IBAction func showHelpWindow(_ sender: AnyObject) {
-        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-        let helpWindowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Help View Controller")) as! NSWindowController
-        helpWindowController.showWindow(self)
-        
-//        if let helpWindow = helpWindowController.window {
-//            //            let helpViewController = helpWindow.contentViewController as! HelpViewController
-//            
-//            let application = NSApplication.shared()
-//            application.runModal(for: helpWindow)
-//            
-//            helpWindow.close()
-//        }
-    }
-    
-    // Show Preferences Window
-    @IBAction func showPrefsWindow(_ sender: AnyObject) {
-        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-        let prefsWindowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Prefs View Controller")) as! NSWindowController
-        prefsWindowController.showWindow(self)
-    }
-
     @IBAction func storeCredentials(_ sender: Any) {
         storeCredentials = storeCredentials_button.state.rawValue
     }
