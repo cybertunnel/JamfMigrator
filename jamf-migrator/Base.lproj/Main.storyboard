@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14109"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -646,7 +645,7 @@
         <scene sceneID="Nn8-vW-tgi">
             <objects>
                 <windowController storyboardIdentifier="Prefs View Controller" id="okF-eF-roi" sceneMemberID="viewController">
-                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="cGB-2c-zKA">
+                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="cGB-2c-zKA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <rect key="contentRect" x="1440" y="427" width="480" height="270"/>
                         <rect key="screenRect" x="1440" y="-180" width="1920" height="1057"/>
@@ -677,11 +676,11 @@
                                 <tabViewItems>
                                     <tabViewItem label="Copy Options" identifier="copyOptions" id="ZJF-Wy-F4D">
                                         <view key="view" ambiguous="YES" id="ylm-IL-sae">
-                                            <rect key="frame" x="1" y="1" width="0.0" height="0.0"/>
+                                            <rect key="frame" x="1" y="1" width="327" height="192"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRN-jJ-KKV">
-                                                    <rect key="frame" x="41" y="-43" width="118" height="17"/>
+                                                    <rect key="frame" x="41" y="149" width="118" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iOS Config Profiles" id="qTm-hl-GZ8">
                                                         <font key="font" metaFont="system"/>
@@ -690,7 +689,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mcC-Rd-Dnb">
-                                                    <rect key="frame" x="158" y="-22" width="80" height="17"/>
+                                                    <rect key="frame" x="158" y="170" width="80" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Copy Scope" id="aap-Y6-xFg">
                                                         <font key="font" metaFont="systemSemibold" size="13"/>
@@ -699,7 +698,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uxh-rK-vTz">
-                                                    <rect key="frame" x="251" y="-22" width="51" height="17"/>
+                                                    <rect key="frame" x="251" y="170" width="51" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Disable" id="TmY-ia-FMQ">
                                                         <font key="font" metaFont="systemSemibold" size="13"/>
@@ -708,7 +707,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ma4-Vn-rHY">
-                                                    <rect key="frame" x="191" y="-45" width="22" height="18"/>
+                                                    <rect key="frame" x="191" y="147" width="22" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="89d-ia-fbd">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -719,7 +718,7 @@
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZB-k0-f1E">
-                                                    <rect key="frame" x="108" y="-63" width="51" height="17"/>
+                                                    <rect key="frame" x="108" y="129" width="51" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Policies" id="3ae-m9-N2P">
                                                         <font key="font" metaFont="system"/>
@@ -728,7 +727,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CM6-dm-Ay9">
-                                                    <rect key="frame" x="191" y="-65" width="22" height="18"/>
+                                                    <rect key="frame" x="191" y="127" width="22" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="APY-wW-WmA">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -739,7 +738,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ii4-vZ-gaf">
-                                                    <rect key="frame" x="267" y="-65" width="22" height="18"/>
+                                                    <rect key="frame" x="267" y="127" width="22" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="BOx-mO-4Sa">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -750,7 +749,7 @@
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oxE-ty-eUi">
-                                                    <rect key="frame" x="18" y="-83" width="141" height="17"/>
+                                                    <rect key="frame" x="18" y="109" width="141" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="macOS Config Profiles" id="SEi-5p-eE7">
                                                         <font key="font" metaFont="system"/>
@@ -759,7 +758,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iE4-oh-Io3">
-                                                    <rect key="frame" x="191" y="-85" width="22" height="18"/>
+                                                    <rect key="frame" x="191" y="107" width="22" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="IXn-Pi-H4F">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -770,7 +769,7 @@
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="47Y-AL-ROh">
-                                                    <rect key="frame" x="35" y="-103" width="124" height="17"/>
+                                                    <rect key="frame" x="35" y="89" width="124" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Restricted Software" id="tMW-a4-n7R">
                                                         <font key="font" metaFont="system"/>
@@ -779,7 +778,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B6f-jX-fcp">
-                                                    <rect key="frame" x="69" y="-128" width="91" height="17"/>
+                                                    <rect key="frame" x="69" y="64" width="91" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Static Groups" id="PeS-YV-4Ht">
                                                         <font key="font" metaFont="systemSemibold" size="13"/>
@@ -788,7 +787,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5lL-dr-Xh7">
-                                                    <rect key="frame" x="191" y="-105" width="22" height="18"/>
+                                                    <rect key="frame" x="191" y="87" width="22" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="kTP-NG-IMl">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -799,7 +798,7 @@
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SRH-sb-h4M">
-                                                    <rect key="frame" x="88" y="-143" width="71" height="17"/>
+                                                    <rect key="frame" x="88" y="49" width="71" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Computers" id="Jsz-Gs-38v">
                                                         <font key="font" metaFont="system"/>
@@ -808,7 +807,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DPU-14-JiB">
-                                                    <rect key="frame" x="133" y="-163" width="26" height="17"/>
+                                                    <rect key="frame" x="133" y="29" width="26" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="iOS" id="5JD-Ga-KdP">
                                                         <font key="font" metaFont="system"/>
@@ -817,7 +816,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pLd-SG-AJv">
-                                                    <rect key="frame" x="119" y="-181" width="40" height="17"/>
+                                                    <rect key="frame" x="119" y="11" width="40" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Users" id="Lnh-4l-s20">
                                                         <font key="font" metaFont="system"/>
@@ -826,7 +825,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WCB-ku-nKB">
-                                                    <rect key="frame" x="190" y="-145" width="22" height="18"/>
+                                                    <rect key="frame" x="190" y="47" width="22" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="QMy-az-LBG">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -837,7 +836,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bva-UR-y1f">
-                                                    <rect key="frame" x="190" y="-164" width="22" height="18"/>
+                                                    <rect key="frame" x="190" y="28" width="22" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="q1H-8V-f1n">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -848,7 +847,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dTK-Dd-4Jj">
-                                                    <rect key="frame" x="190" y="-183" width="22" height="18"/>
+                                                    <rect key="frame" x="190" y="9" width="22" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="k1p-Nu-lur">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1008,7 +1007,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="jamf-migrator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="jamf-migrator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -1029,7 +1028,7 @@
         <scene sceneID="dpm-Vs-BK7">
             <objects>
                 <windowController storyboardIdentifier="Help View Controller" id="md9-xU-Yaj" sceneMemberID="viewController">
-                    <window key="window" title="Help" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="Lg4-MW-haW">
+                    <window key="window" title="Help" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="" animationBehavior="default" id="Lg4-MW-haW">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="245" y="301" width="480" height="270"/>
@@ -1050,7 +1049,7 @@
         <scene sceneID="e6I-b9-s6U">
             <objects>
                 <windowController storyboardIdentifier="Summary Window Controller" id="UDh-wr-lId" sceneMemberID="viewController">
-                    <window key="window" title="Summary" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="qfs-AC-LGi">
+                    <window key="window" title="Summary" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="qfs-AC-LGi">
                         <windowStyleMask key="styleMask" titled="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="1734" y="133" width="480" height="270"/>
@@ -1163,7 +1162,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="https://source.jamf.server:port" drawsBackground="YES" id="djf-h0-RCW">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -1181,7 +1180,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="right" placeholderString="password" drawsBackground="YES" usesSingleLineMode="YES" id="LDk-MB-Wrw">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <allowedInputSourceLocales>
                                         <string>NSAllRomanInputSourcesLocaleIdentifier</string>
@@ -1214,7 +1213,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="https://destination.jamf.server:port" drawsBackground="YES" id="5bd-hN-tZn">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -1232,7 +1231,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="password" drawsBackground="YES" usesSingleLineMode="YES" id="EjT-Di-6DA">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <allowedInputSourceLocales>
                                         <string>NSAllRomanInputSourcesLocaleIdentifier</string>
@@ -1403,7 +1402,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="702" height="191"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <userGuides>
-                                                                    <userLayoutGuide location="76" affinity="minY"/>
+                                                                    <userLayoutGuide location="77" affinity="minY"/>
                                                                     <userLayoutGuide location="549" affinity="minX"/>
                                                                 </userGuides>
                                                                 <subviews>
@@ -1424,7 +1423,6 @@
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="allNone:" target="XfG-lQ-9wD" id="V1r-44-GIu"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.selectAll" id="A4Q-ST-beN"/>
                                                                         </connections>
                                                                     </button>
@@ -1445,7 +1443,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="7cR-ph-3Ad"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.smartGroups" id="Pdk-F1-9Yg"/>
                                                                         </connections>
                                                                     </button>
@@ -1466,7 +1463,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="46Q-AK-mO8"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.staticGroups" id="Hpn-4W-6uh"/>
                                                                         </connections>
                                                                     </button>
@@ -1487,7 +1483,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="CRp-pZ-0hc"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.scripts" id="Nn1-Yd-NLx"/>
                                                                         </connections>
                                                                     </button>
@@ -1508,7 +1503,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="3ZG-xa-5tk"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.extensionAttributes" id="t0R-VZ-kPi"/>
                                                                         </connections>
                                                                     </button>
@@ -1529,7 +1523,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Uys-mO-IZL"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.fileShares" id="0qt-6w-r7X"/>
                                                                         </connections>
                                                                     </button>
@@ -1550,7 +1543,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="gBZ-aK-Ls9"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.sus" id="W97-zh-37g"/>
                                                                         </connections>
                                                                     </button>
@@ -1571,7 +1563,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="1oL-A0-KdZ"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.policies" id="2wQ-tI-bQW"/>
                                                                         </connections>
                                                                     </button>
@@ -1592,7 +1583,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="8hJ-C8-uND"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.computers" id="xpH-TA-hBP"/>
                                                                         </connections>
                                                                     </button>
@@ -1613,7 +1603,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="RDy-sC-qBs"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.configProfiles" id="hSK-uY-xP8"/>
                                                                         </connections>
                                                                     </button>
@@ -1634,7 +1623,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="R4b-Z1-1U7"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.advCompSearches" id="D19-0J-yIT"/>
                                                                         </connections>
                                                                     </button>
@@ -1655,7 +1643,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="o7c-Z5-SiQ"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.netbootServers" id="FKl-Dv-bN9"/>
                                                                         </connections>
                                                                     </button>
@@ -1676,7 +1663,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="IpP-4y-Yco"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.packages" id="i1t-AI-9gi"/>
                                                                         </connections>
                                                                     </button>
@@ -1697,7 +1683,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="7pj-OG-TqB"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.printers" id="HAP-oI-OdZ"/>
                                                                         </connections>
                                                                     </button>
@@ -1738,7 +1723,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="9XO-hZ-EaL"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.dockItems" id="2CH-yG-oBG"/>
                                                                         </connections>
                                                                     </button>
@@ -1759,7 +1743,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="zpm-63-oln"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.configurations" id="g5I-oo-eyx"/>
                                                                         </connections>
                                                                     </button>
@@ -1780,7 +1763,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="L2r-3S-lEI"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.macOSConfig.restrictedSoftware" id="tZY-oQ-tTg"/>
                                                                         </connections>
                                                                     </button>
@@ -1811,7 +1793,6 @@
                                                 </tabView>
                                             </subviews>
                                         </view>
-                                        <accessibility description="macOS" identifier="macOS"/>
                                     </tabViewItem>
                                     <tabViewItem label="iOS" identifier="2" id="ECI-6E-ufR">
                                         <view key="view" id="p6U-ah-Cbx">
@@ -1849,8 +1830,7 @@
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="allNone:" target="XfG-lQ-9wD" id="ohi-uf-wca"/>
-                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.selectAll" id="kTv-lu-QCh"/>
+                                                                            <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.selectAll" id="hr2-9L-11z"/>
                                                                         </connections>
                                                                     </button>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uo3-PW-fQz" userLabel="Static Group fld">
@@ -1870,7 +1850,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="wsn-iq-7LO"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.staticGroups" id="vRz-aZ-hDr"/>
                                                                         </connections>
                                                                     </button>
@@ -1891,7 +1870,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="L9W-B1-Ojc"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.smartGroups" id="17s-Xl-9n5"/>
                                                                         </connections>
                                                                     </button>
@@ -1912,7 +1890,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Uu6-rJ-6yc"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.adviOSSearches" id="c38-gI-1F7"/>
                                                                         </connections>
                                                                     </button>
@@ -1933,7 +1910,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Nhj-vd-hMp"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.iOSDevices" id="XEF-TB-EEQ"/>
                                                                         </connections>
                                                                     </button>
@@ -1994,7 +1970,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Xne-cs-CCT"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.extensionAttributes" id="bhD-kp-WSc"/>
                                                                         </connections>
                                                                     </button>
@@ -2015,7 +1990,6 @@
                                                                             <font key="font" size="14" name="Helvetica"/>
                                                                         </buttonCell>
                                                                         <connections>
-                                                                            <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="bbu-Oa-wWn"/>
                                                                             <binding destination="XfG-lQ-9wD" name="value" keyPath="self.iOSConfig.configProfiles" id="A5s-vh-3RR"/>
                                                                         </connections>
                                                                     </button>
@@ -2026,10 +2000,9 @@
                                                 </tabView>
                                             </subviews>
                                         </view>
-                                        <accessibility description="iOS" identifier="iOS"/>
                                     </tabViewItem>
                                     <tabViewItem label="General" identifier="" id="88A-Nu-WEM">
-                                        <view key="view" ambiguous="YES" id="CPy-PU-zBW">
+                                        <view key="view" id="CPy-PU-zBW">
                                             <rect key="frame" x="10" y="33" width="696" height="186"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <userGuides>
@@ -2063,7 +2036,6 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="allNone:" target="XfG-lQ-9wD" id="gw3-6N-Xdy"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.selectAll" id="og9-ZV-Yt3"/>
                                                     </connections>
                                                 </button>
@@ -2084,7 +2056,6 @@
                                                         <font key="font" size="14" name="Helvetica"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Yfo-KR-732"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.categories" id="tze-dS-upe"/>
                                                     </connections>
                                                 </button>
@@ -2105,7 +2076,6 @@
                                                         <font key="font" size="14" name="Helvetica"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="cWY-si-yVy"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.buildings" id="zOB-YW-4JR"/>
                                                     </connections>
                                                 </button>
@@ -2126,7 +2096,6 @@
                                                         <font key="font" size="14" name="Helvetica"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="1el-CX-7J1"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.users" id="3gv-z9-fRq"/>
                                                     </connections>
                                                 </button>
@@ -2147,7 +2116,6 @@
                                                         <font key="font" size="14" name="Helvetica"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="atd-5g-QPN"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.sites" id="COf-gL-ToB"/>
                                                     </connections>
                                                 </button>
@@ -2168,7 +2136,6 @@
                                                         <font key="font" size="14" name="Helvetica"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Gc3-co-4uL"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.networkSegments" id="DTa-wy-N28"/>
                                                     </connections>
                                                 </button>
@@ -2189,7 +2156,6 @@
                                                         <font key="font" size="14" name="Helvetica"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="P5G-c0-uq7"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.departments" id="cyT-hR-VTZ"/>
                                                     </connections>
                                                 </button>
@@ -2210,7 +2176,6 @@
                                                         <font key="font" size="14" name="Helvetica"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="uRg-Bj-vZx"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.LDAPServers" id="8dC-NT-pCP"/>
                                                     </connections>
                                                 </button>
@@ -2222,7 +2187,6 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Y0J-zf-4LP"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.smartUserGroups" id="eRE-wm-kWv"/>
                                                     </connections>
                                                 </button>
@@ -2243,7 +2207,6 @@
                                                         <font key="font" size="14" name="Helvetica"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="Kro-uv-V8r"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.userEAs" id="lC3-Dn-KXP"/>
                                                     </connections>
                                                 </button>
@@ -2264,7 +2227,6 @@
                                                         <font key="font" size="14" name="Helvetica"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="f3B-7V-Jjn"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.advUserSearches" id="p9x-NY-Mjf"/>
                                                     </connections>
                                                 </button>
@@ -2285,7 +2247,6 @@
                                                         <font key="font" size="14" name="Helvetica"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="5Uf-ej-2g6"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.jamfUsers" id="07D-p9-rMy"/>
                                                     </connections>
                                                 </button>
@@ -2306,7 +2267,6 @@
                                                         <font key="font" size="14" name="Helvetica"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="BSi-oB-ls4"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.jamfGroups" id="4xh-7W-cmK"/>
                                                     </connections>
                                                 </button>
@@ -2327,16 +2287,14 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="toggleAllNone:" target="XfG-lQ-9wD" id="h2j-3G-hdN"/>
                                                         <binding destination="XfG-lQ-9wD" name="value" keyPath="self.config.staticUserGroups" id="bWP-Rb-erA"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                         </view>
-                                        <accessibility description="general" identifier="general"/>
                                     </tabViewItem>
                                     <tabViewItem label="Selective" identifier="3" id="Fo1-1P-mP5">
-                                        <view key="view" id="TA8-Ho-89h">
+                                        <view key="view" ambiguous="YES" id="TA8-Ho-89h">
                                             <rect key="frame" x="10" y="33" width="696" height="186"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -2520,7 +2478,7 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <clipView key="contentView" ambiguous="YES" id="xbF-pR-KVb">
                                                                 <rect key="frame" x="1" y="1" width="395" height="161"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" autosaveColumns="NO" id="FBt-wQ-W9U" userLabel="Source Table View">
                                                                         <rect key="frame" x="0.0" y="0.0" width="395" height="161"/>
@@ -2550,11 +2508,11 @@
                                                                     </tableView>
                                                                 </subviews>
                                                             </clipView>
-                                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="gEQ-tu-8t7">
+                                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="gEQ-tu-8t7">
                                                                 <rect key="frame" x="1" y="-15" width="0.0" height="16"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
-                                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="lbA-xB-Awp">
+                                                            <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="lbA-xB-Awp">
                                                                 <rect key="frame" x="-100" y="-100" width="15" height="102"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
@@ -2563,7 +2521,6 @@
                                                 </view>
                                             </subviews>
                                         </view>
-                                        <accessibility description="Selective" identifier="Selective"/>
                                     </tabViewItem>
                                 </tabViewItems>
                             </tabView>

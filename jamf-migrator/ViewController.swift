@@ -342,20 +342,6 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
     @IBAction func storeCredentials(_ sender: Any) {
         storeCredentials = storeCredentials_button.state.rawValue
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
 
     @IBAction func showLogFolder(_ sender: Any) {
         isDir = true
@@ -363,113 +349,6 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
             NSWorkspace.shared.openFile(logPath!)
         } else {
             alert_dialog(header: "Alert", message: "There are currently no log files to display.")
-        }
-    }
-    
-    @IBAction func toggleAllNone(_ sender: NSButton) {
-        //        platform = deviceType()
-        if deviceType() == "macOS" {
-/** NOTE: Commenting out for binding testing
-            self.allNone_button.state = NSControl.StateValue(rawValue: (
-                self.advcompsearch_button.state.rawValue == 1
-                    && self.computers_button.state.rawValue == 1
-                    && self.configurations_button.state.rawValue == 1
-                    && self.directory_bindings_button.state.rawValue == 1
-                    && self.dock_items_button.state.rawValue == 1
-                    && self.fileshares_button.state.rawValue == 1
-                    && self.sus_button.state.rawValue == 1
-                    && self.netboot_button.state.rawValue == 1
-                    && self.osxconfigurationprofiles_button.state.rawValue == 1
-                    //                    && self.patch_mgmt_button.state == 1
-                    && self.patch_policies_button.state.rawValue == 1
-                    && self.smart_comp_grps_button.state.rawValue == 1
-                    && self.static_comp_grps_button.state.rawValue == 1
-                    && self.ext_attribs_button.state.rawValue == 1
-                    && self.scripts_button.state.rawValue == 1
-                    && self.packages_button.state.rawValue == 1
-                    && self.printers_button.state.rawValue == 1
-                    && self.restrictedsoftware_button.state.rawValue == 1
-                    && self.policies_button.state.rawValue == 1) ? 1 : 0);
- */
-        } else if deviceType() == "iOS" {
-/** NOTE: Commenting out for binding testing
-            self.allNone_iOS_button.state = NSControl.StateValue(rawValue: (
-                self.mobiledeviceconfigurationprofiles_button.state.rawValue == 1
-                    && self.mobiledevices_button.state.rawValue == 1
-                    && self.smart_ios_groups_button.state.rawValue == 1
-                    && self.static_ios_groups_button.state.rawValue == 1
-                    && self.mobiledeviceextensionattributes_button.state.rawValue == 1
-                    && self.advancedmobiledevicesearches_button.state.rawValue == 1) ? 1 : 0);
- */
-        } else {
-            // general
-/** NOTE: Commenting out for binding testing
-            self.allNone_general_button.state = NSControl.StateValue(rawValue: (
-                self.building_button.state.rawValue == 1
-                    && self.categories_button.state.rawValue == 1
-                    && self.dept_button.state.rawValue == 1
-                    && self.advusersearch_button.state.rawValue == 1
-                    && self.userEA_button.state.rawValue == 1
-                    && self.ldapservers_button.state.rawValue == 1
-                    && self.sites_button.state.rawValue == 1
-                    && self.networks_button.state.rawValue == 1
-                    && self.jamfUserAccounts_button.state.rawValue == 1
-                    && self.jamfGroupAccounts_button.state.rawValue == 1
-                    && self.smartUserGrps_button.state.rawValue == 1
-                    && self.staticUserGrps_button.state.rawValue == 1
-                    && self.users_button.state.rawValue == 1) ? 1 : 0);
- */
-        }
-    }
-    
-    @IBAction func allNone(_ sender: Any) {
-        if deviceType() == "macOS" {
-/** NOTE: Commenting out for binding testing
-            self.advcompsearch_button.state = self.allNone_button.state
-            self.computers_button.state = self.allNone_button.state
-            self.configurations_button.state = self.allNone_button.state
-            self.directory_bindings_button.state = self.allNone_button.state
-            self.dock_items_button.state = self.allNone_button.state
-            self.fileshares_button.state = self.allNone_button.state
-            self.sus_button.state = self.allNone_button.state
-            self.netboot_button.state = self.allNone_button.state
-            self.osxconfigurationprofiles_button.state = self.allNone_button.state
-//            self.patch_mgmt_button.state = self.allNone_button.state
-            self.patch_policies_button.state = self.allNone_button.state
-            self.smart_comp_grps_button.state = self.allNone_button.state
-            self.static_comp_grps_button.state = self.allNone_button.state
-            self.ext_attribs_button.state = self.allNone_button.state
-            self.scripts_button.state = self.allNone_button.state
-            self.packages_button.state = self.allNone_button.state
-            self.printers_button.state = self.allNone_button.state
-            self.restrictedsoftware_button.state = self.allNone_button.state
-            self.policies_button.state = self.allNone_button.state
- */
-        } else if deviceType() == "iOS" {
-/** NOTE: Commenting out for binding testing
-            self.advancedmobiledevicesearches_button.state = self.allNone_iOS_button.state
-            self.mobiledevices_button.state = self.allNone_iOS_button.state
-            self.smart_ios_groups_button.state = self.allNone_iOS_button.state
-            self.static_ios_groups_button.state = self.allNone_iOS_button.state
-            self.mobiledeviceextensionattributes_button.state = self.allNone_iOS_button.state
-            self.mobiledeviceconfigurationprofiles_button.state = self.allNone_iOS_button.state
- */
-        } else {
-/** NOTE: Commenting out for binding testing
-            self.building_button.state = self.allNone_general_button.state
-            self.categories_button.state = self.allNone_general_button.state
-            self.dept_button.state = self.allNone_general_button.state
-            self.advusersearch_button.state = self.allNone_general_button.state
-            self.userEA_button.state = self.allNone_general_button.state
-            self.ldapservers_button.state = self.allNone_general_button.state
-            self.sites_button.state = self.allNone_general_button.state
-            self.networks_button.state = self.allNone_general_button.state
-            self.jamfUserAccounts_button.state = self.allNone_general_button.state
-            self.jamfGroupAccounts_button.state = self.allNone_general_button.state
-            self.smartUserGrps_button.state = self.allNone_general_button.state
-            self.staticUserGrps_button.state = self.allNone_general_button.state
-            self.users_button.state = self.allNone_general_button.state
- */
         }
     }
     
