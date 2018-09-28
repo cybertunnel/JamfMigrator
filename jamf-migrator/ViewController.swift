@@ -3767,59 +3767,6 @@ class ViewController: NSViewController, URLSessionDelegate, NSTableViewDelegate,
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        // Sellect all items to be migrated
-        // macOS tab
-/** NOTE: Commanding out for binding testing
-        allNone_button.state = NSControl.StateValue(rawValue: 1)
-        advcompsearch_button.state = NSControl.StateValue(rawValue: 1)
-        computers_button.state = NSControl.StateValue(rawValue: 1)
-        configurations_button.state = NSControl.StateValue(rawValue: 1)
-        directory_bindings_button.state = NSControl.StateValue(rawValue: 1)
-        dock_items_button.state = NSControl.StateValue(rawValue: 1)
-        netboot_button.state = NSControl.StateValue(rawValue: 1)
-        osxconfigurationprofiles_button.state = NSControl.StateValue(rawValue: 1)
-//        patch_mgmt_button.state = 1
-        patch_policies_button.state = NSControl.StateValue(rawValue: 1)
-        sus_button.state = NSControl.StateValue(rawValue: 1)
-        fileshares_button.state = NSControl.StateValue(rawValue: 1)
-        ext_attribs_button.state = NSControl.StateValue(rawValue: 1)
-        smart_comp_grps_button.state = NSControl.StateValue(rawValue: 1)
-        static_comp_grps_button.state = NSControl.StateValue(rawValue: 1)
-        scripts_button.state = NSControl.StateValue(rawValue: 1)
-        packages_button.state = NSControl.StateValue(rawValue: 1)
-        policies_button.state = NSControl.StateValue(rawValue: 1)
-        printers_button.state = NSControl.StateValue(rawValue: 1)
-        restrictedsoftware_button.state = NSControl.StateValue(rawValue: 1)
- */
-        // iOS tab
-/** NOTE: Commanding out for binding testing
-        allNone_iOS_button.state = NSControl.StateValue(rawValue: 1)
-        advancedmobiledevicesearches_button.state = NSControl.StateValue(rawValue: 1)
-        mobiledevicecApps_button.state = NSControl.StateValue(rawValue: 0)
-        mobiledevices_button.state = NSControl.StateValue(rawValue: 1)
-        smart_ios_groups_button.state = NSControl.StateValue(rawValue: 1)
-        static_ios_groups_button.state = NSControl.StateValue(rawValue: 1)
-        mobiledeviceconfigurationprofiles_button.state = NSControl.StateValue(rawValue: 1)
-        mobiledeviceextensionattributes_button.state = NSControl.StateValue(rawValue: 1)
- */
-        // general tab
-/** NOTE: Commenting out for binding testing
-        allNone_general_button.state = NSControl.StateValue(rawValue: 1)
-        advusersearch_button.state = NSControl.StateValue(rawValue: 1)
-        building_button.state = NSControl.StateValue(rawValue: 1)
-        categories_button.state = NSControl.StateValue(rawValue: 1)
-        dept_button.state = NSControl.StateValue(rawValue: 1)
-        userEA_button.state = NSControl.StateValue(rawValue: 1)
-        sites_button.state = NSControl.StateValue(rawValue: 1)
-        ldapservers_button.state = NSControl.StateValue(rawValue: 1)
-        networks_button.state = NSControl.StateValue(rawValue: 1)
-        users_button.state = NSControl.StateValue(rawValue: 1)
-        jamfUserAccounts_button.state = NSControl.StateValue(rawValue: 1)
-        jamfGroupAccounts_button.state = NSControl.StateValue(rawValue: 1)
-        smartUserGrps_button.state = NSControl.StateValue(rawValue: 1)
-        staticUserGrps_button.state = NSControl.StateValue(rawValue: 1)
- */
-        
         source_jp_server_field.becomeFirstResponder()
         go_button.isEnabled = true
         
