@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		814021EB215C14060076EBAC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814021EA215C14060076EBAC /* Configuration.swift */; };
 		81402226215C17090076EBAC /* macOSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81402225215C17090076EBAC /* macOSConfiguration.swift */; };
+		8140222E216266210076EBAC /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140222D216266210076EBAC /* Option.swift */; };
+		81402230216267760076EBAC /* OptionStatusTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140222F216267760076EBAC /* OptionStatusTransformer.swift */; };
 		816E998E215D721B00E69A3F /* iOSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E998D215D721B00E69A3F /* iOSConfiguration.swift */; };
 		816E9990215D760500E69A3F /* GeneralConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E998F215D760500E69A3F /* GeneralConfiguration.swift */; };
 		9BC01C601DFB0C07007E634E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC01C5F1DFB0C07007E634E /* AppDelegate.swift */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		814021EA215C14060076EBAC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		81402225215C17090076EBAC /* macOSConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSConfiguration.swift; sourceTree = "<group>"; };
+		8140222D216266210076EBAC /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		8140222F216267760076EBAC /* OptionStatusTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionStatusTransformer.swift; sourceTree = "<group>"; };
 		816E998D215D721B00E69A3F /* iOSConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSConfiguration.swift; sourceTree = "<group>"; };
 		816E998F215D760500E69A3F /* GeneralConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralConfiguration.swift; sourceTree = "<group>"; };
 		9BC01C5C1DFB0C07007E634E /* jamf-migrator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "jamf-migrator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,10 +101,12 @@
 			isa = PBXGroup;
 			children = (
 				B59D0C39202B97BA006203CE /* Credentials.swift */,
+				8140222D216266210076EBAC /* Option.swift */,
 				B5927AFB20CC394F0059C25B /* VersionCheck.swift */,
 				B5165E1520E580A00086E31D /* Xml.swift */,
 				814021EA215C14060076EBAC /* Configuration.swift */,
 				81402224215C16E50076EBAC /* Configurations */,
+				8140222F216267760076EBAC /* OptionStatusTransformer.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -268,9 +274,11 @@
 				816E998E215D721B00E69A3F /* iOSConfiguration.swift in Sources */,
 				9BC01C621DFB0C07007E634E /* ViewController.swift in Sources */,
 				B58D87FE20C22293003F8D4C /* PrefsViewController.swift in Sources */,
+				81402230216267760076EBAC /* OptionStatusTransformer.swift in Sources */,
 				814021EB215C14060076EBAC /* Configuration.swift in Sources */,
 				B5B651901F203C48007D7CE6 /* HelpViewController.swift in Sources */,
 				B5927AFC20CC394F0059C25B /* VersionCheck.swift in Sources */,
+				8140222E216266210076EBAC /* Option.swift in Sources */,
 				B59D0C3A202B97BA006203CE /* Credentials.swift in Sources */,
 				9BC01C601DFB0C07007E634E /* AppDelegate.swift in Sources */,
 				81402226215C17090076EBAC /* macOSConfiguration.swift in Sources */,
